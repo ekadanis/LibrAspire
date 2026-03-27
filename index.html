@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibrAspire</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f4f8fc;
+            color: #333;
+        }
+
+        /* NAVBAR */
+        header {
+            background: linear-gradient(135deg, #1e3f5a, #2c5aa0);
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+        }
+
+        header h1 {
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .hero img {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .search-box {
+            margin-top: 20px;
+        }
+
+        .search-box input {
+            padding: 12px;
+            width: 300px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        .search-box button {
+            padding: 12px 20px;
+            background: #2c5aa0;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* SECTION */
+        section {
+            padding: 50px 40px;
+        }
+
+        h2 {
+            color: #2c5aa0;
+            margin-bottom: 20px;
+        }
+
+        /* CATEGORIES */
+        .categories ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            list-style: none;
+        }
+
+        .categories li {
+            background: #e8f1f8;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        /* BOOKS */
+        .books {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .book {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .book img {
+            width: 100px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* HOW IT WORKS */
+        .steps div {
+            margin-bottom: 10px;
+        }
+
+        /* STATS */
+        .stats {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            background: #2c5aa0;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* CONTACT */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .contact-left {
+            background: #f0f6fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-left img {
+            max-width: 100%;
+        }
+
+        .contact-form {
+            padding: 30px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: none;
+            background: #e8f1f8;
+            border-radius: 8px;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 12px;
+            background: #00b4d8;
+            border: none;
+            color: white;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #1e3f5a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: #90e0ef;
+            text-decoration: none;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <h1>LibrAspire</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Catalog</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h2>Find and Borrow Books Easily</h2>
+        <p><strong>Temukan</strong> dan <em>pinjam</em> buku dengan mudah.</p>
+        <img src="https://via.placeholder.com/600x300" alt="Library">
+        
+        <div class="search-box">
+            <input type="text" placeholder="Search book...">
+            <button>Cari</button>
+        </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="categories">
+        <h2>Book Categories</h2>
+        <ul>
+            <li>Fantasy (2,525 books)</li>
+            <li>Novel (5,500 books)</li>
+            <li>Technology (2,500 books)</li>
+            <li>Education (2,300 books)</li>
+            <li>History (1,900 books)</li>
+            <li>Science (1,323 books)</li>
+        </ul>
+    </section>
+
+    <!-- BOOKS -->
+    <section>
+        <h2>Popular Books</h2>
+        <div class="books">
+            <div class="book">
+                <h3>The Subtle Art of Not Giving a F*ck</h3>
+                <p>Mark Manson (2016)</p>
+                <img src="https://via.placeholder.com/100x150">
+                <p>Status: Available</p>
+            </div>
+
+            <div class="book">
+                <h3>Atomic Habits</h3>
+                <p>James Clear (2018)</p>
+                <img src="https://via.placeholder.com/100x150">
+                <p>Status: Available</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section>
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div>1. Register - Buat akun gratis</div>
+            <div>2. Search Book - Temukan buku</div>
+            <div>3. Request Borrow - Ajukan peminjaman</div>
+            <div>4. Pick Up Book - Ambil buku</div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section>
+        <h2>Statistics</h2>
+        <div class="stats">
+            <div class="stat">16,048+ Books</div>
+            <div class="stat">2,870+ Members</div>
+            <div class="stat">900+ Monthly Borrows</div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+
+        <div class="contact-container">
+            <div class="contact-left">
+                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794">
+            </div>
+
+            <div class="contact-form">
+                <form>
+                    <input type="text" placeholder="Nama" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Pesan"></textarea>
+                    <button type="submit">Kirim</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 LibrAspire</p>
+        <p>Email | Twitter | Facebook | Instagram</p>
+        <p>Jl H Agus Salim no 39, Madiun</p>
+    </footer>
+
+</body>
+
+</html>
